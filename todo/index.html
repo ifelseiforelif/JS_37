@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <header>
+        <div class="logo">ToDo</div>
+      </header>
+
+      <section class="new-todo">
+        <input
+          id="newInput"
+          type="text"
+          placeholder="Додати задачу і натиснути Enter или +"
+        />
+        <button id="addBtn" class="btn">+</button>
+      </section>
+
+      <ul id="list" class="list" aria-live="polite"></ul>
+
+      <div class="meta">
+        <div id="count">0 tasks</div>
+        <div class="filters" role="tablist" aria-label="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <div
+        style="display: flex; justify-content: space-between; margin-top: 12px"
+      >
+        <button id="clearCompleted" class="filter-btn">Clear completed</button>
+        <div style="color: var(--muted); font-size: 12px">
+          Double-click to edit
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
